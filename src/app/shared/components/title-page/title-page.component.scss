@@ -1,0 +1,10 @@
+@use '../../../../styles.scss' as *;
+
+.title-page {
+  font-size: 2rem;
+  width: 100%;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid $primary;
+  margin: 0 0 1rem 0;
+  color: $black;
+}

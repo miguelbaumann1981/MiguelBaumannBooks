@@ -1,0 +1,18 @@
+<div class="media-page">
+  <mb-title-page [title]="'Vídeos'" />
+
+  <div class="media-page__content" [ngClass]="{'mobile': isSmallDevice()}">
+    <video class="media-page__content--video" poster="/media/imagen-video.jpg" width="100%" height="" controls  preload [ngClass]="{'mobile': isSmallDevice()}">
+      <source src="/media/entrevista.mp4" type="video/mp4">
+      <source src="/media/entrevista.ogg" type="video/ogg">
+      <source src="/media/entrevista.webm" type="video/webm">
+
+      <img src="/images/background-home.jpg" alt="Video no soportado">
+      Su navegador no soporta contenido multimedia.
+    </video>
+
+    <div class="media-page__content--video" [ngClass]="{'mobile': isSmallDevice()}">
+      <iframe width="100%" [height]="isSmallDevice() ? '350px' : '100%'" src="https://www.youtube.com/embed/V8ozJwC5Uqk?si=b4W8W1piLhRUoZyK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

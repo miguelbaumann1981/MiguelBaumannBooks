@@ -1,0 +1,23 @@
+<div class="book-detail">
+  <div class="book-detail__header">
+    <h2>{{ data.title }} <small>{{ data.year }}</small></h2>
+    <a (click)="closeDialog()"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close"></mat-icon>
+</a>
+  </div>
+
+  <div class="book-detail__body" [ngClass]="{'mobile': isSmallDevice()}">
+    @if (!this.isSmallDevice()) {
+      <div class="book-detail__body--image">
+        <img  [src]="data.imageUrl" [alt]="data.title" />
+      </div>
+    }
+    <div class="book-detail__body--description" [ngClass]="{'mobile': isSmallDevice()}">
+      <div class="book-detail__body--description-text" [innerHTML]="data.description"></div>
+      <sales-channel [amazonLink]="data.amazonLink" [bubokLink]="data.bubokLink" />
+    </div>
+  </div>
+
+  <div class="book-detail__footer">
+    <button mat-button (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

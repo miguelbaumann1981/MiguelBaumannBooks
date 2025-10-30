@@ -1,0 +1,72 @@
+@use '../../../../styles.scss' as *;
+
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: $black;
+      small {
+        padding-left: 0.5rem;
+        color: grey;
+        font-weight: lighter;
+        font-size: 0.7rem;
+      }
+    }
+    a {
+      cursor: pointer;
+      mat-icon {
+        color: grey;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    &.mobile {
+        overflow-y: auto;
+      }
+    &--image {
+      width: 30%;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+    &--description {
+      width: 68%;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      justify-content: space-between;
+      &-text {
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      &.mobile {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.5rem;
+    border-top: 1px solid #ddd;
+  }
+}

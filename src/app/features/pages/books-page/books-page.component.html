@@ -1,0 +1,12 @@
+<div class="books-page" [ngClass]="{'mobile': isSmallDevice(), 'tablet': isTabletDevice()}">
+  <mb-title-page [title]="'Libros'" />
+
+  <ul class="books-page__list" [ngClass]="{'mobile': isSmallDevice()}">
+    @for(book of content(); track book.id) {
+      <li class="books-page__list--item" [ngClass]="{'mobile': isSmallDevice(), 'tablet': isTabletDevice()}">
+        <book-card [book]="book" />
+      </li>
+      }
+  </ul>
+</div>
+
